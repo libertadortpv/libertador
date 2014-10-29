@@ -20,6 +20,9 @@ angular
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
+        redirectTo: '/home'
+      })
+      .when('/home', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
@@ -27,7 +30,10 @@ angular
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl'
       })
+      .when('/404', {
+        templateUrl: '/404.html'
+      })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/404'
       });
   });

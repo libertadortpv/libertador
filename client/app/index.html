@@ -19,16 +19,20 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
+
     <!-- Add your site or application content here -->
     <div class="container" ng-controller="AppController">
-      <div class="header">
+      <div class="header clearfix text-center">
+
+        <p class="text-center">
+            <img src="images/logo-footer.png" alt="I'm Yeoman"><br>
+        </p>
         <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Home</a></li>
-          <li><a ng-href="#/login">Login</a></li>
-          <li><a ng-href="#admin">Admin</a></li>
+          <li ng-class="{active: inHome}"><a ng-href="#">Home</a></li>
+          <li ng-class="{active: inLogin}"><a ng-href="#/login">Login</a></li>
+          <li ng-class="{active: inAdmin}"><a ng-href="#admin">Admin</a></li>
           <li ng-if="currentUser" class="hello pull-right">Hello {{currentUser.name}}!</li>
         </ul>
-        <h3 class="text-muted">libertador</h3>
       </div>
 
       <div ng-view=""></div>
@@ -79,6 +83,8 @@
         <script src="scripts/services/auth/auth-service.js"></script>
         <script src="scripts/services/auth/session.js"></script>
         <script src="scripts/services/urlconfig.js"></script>
+
+        <script src="scripts/directives/header.js"></script>
         <!-- endbuild -->
 </body>
 </html>
