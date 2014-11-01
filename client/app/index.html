@@ -22,24 +22,37 @@
 
     <!-- Add your site or application content here -->
     <div class="container" ng-controller="AppController">
-      <div class="header clearfix text-center">
+        <div class="header clearfix text-center">
+            <p class="text-center">
+                <img class="header-logo" src="images/logo-header.png" alt="I'm Yeoman"><br>
+            </p>
+            <ul class="nav nav-pills pull-right">
+                <li ng-class="{active: inHome}"><a ng-href="#">Home</a></li>
+                <li
+                    ng-if="!isAuthorized()"
+                    ng-class="{active: inLogin}">
+                        <a ng-href="#/login">Login</a>
+                </li>
+                <li ng-class="{active: inSalon}">
+                    <a ng-href="#salon">Salon</a>
+                </li>
+                <li ng-class="{active: inAdmin}">
+                    <a ng-href="#admin">Admin</a>
+                </li>
+                <li ng-if="isAuthorized()" class="hello pull-right">Hello {{currentUser.name}}!</li>
+                <li ng-if="isAuthorized()">
+                    <a ng-href="#/login" ng-click="logout()">Logout</a>
+                </li>
+            </ul>
+        </div>
 
-        <p class="text-center">
-            <img src="images/logo-footer.png" alt="I'm Yeoman"><br>
-        </p>
-        <ul class="nav nav-pills pull-right">
-          <li ng-class="{active: inHome}"><a ng-href="#">Home</a></li>
-          <li ng-class="{active: inLogin}"><a ng-href="#/login">Login</a></li>
-          <li ng-class="{active: inAdmin}"><a ng-href="#admin">Admin</a></li>
-          <li ng-if="currentUser" class="hello pull-right">Hello {{currentUser.name}}!</li>
-        </ul>
-      </div>
+        <div class="view-animate" ng-view="" ng-animate="'animate'"></div>
 
-      <div ng-view=""></div>
-
-      <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
+        <div class="footer">
+            <p>
+                <span class="glyphicon glyphicon-heart"></span>
+            </p>
+        </div>
     </div>
 
     <!-- build:js(.) scripts/oldieshim.js -->
@@ -78,6 +91,8 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/login.js"></script>
+        <script src="scripts/controllers/salon.js"></script>
+        <script src="scripts/controllers/table.js"></script>
         <script src="scripts/controllers/app.js"></script>
         <script src="scripts/services/auth/auth-constants.js"></script>
         <script src="scripts/services/auth/auth-service.js"></script>

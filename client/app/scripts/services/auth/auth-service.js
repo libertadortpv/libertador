@@ -24,8 +24,9 @@ angular.module('libertadorApp')
   authService.logout = function() {
     return $http
       .get(Urls.logout, Session.user)
-      .then(function(res) {
-      });
+        .then(function(res) {
+          Session.destroy();
+        });
   };
 
   authService.register = function(credentials) {
@@ -41,7 +42,7 @@ angular.module('libertadorApp')
   };
 
   authService.isAuthenticated = function() {
-    return !!Session.userId;
+    return !!Session.id;
   };
 
   authService.isAuthorized = function(authorizedRoles) {

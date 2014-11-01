@@ -30,8 +30,16 @@ angular
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl'
       })
+      .when('/salon', {
+        controller: 'SalonCtrl',
+        templateUrl: 'views/salon.html'
+      })
+      .when('/salon/:tableId', {
+        controller: 'TableCtrl',
+        templateUrl: 'views/table.html'
+      })
       .when('/404', {
-        templateUrl: '/404.html'
+        templateUrl: 'views/404.html'
       })
       .otherwise({
         redirectTo: '/404'

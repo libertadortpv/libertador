@@ -9,10 +9,12 @@ angular.module('libertadorApp')
 
     var urls = {
       mock: {
-        login: 'scripts/mocks/user.json'
+        login: 'scripts/mocks/user.json',
+        logout: 'scripts/mocks/user.json'
       },
       dev: {
-        login: 'api/login'
+        login: 'api/login',
+        logout: 'api/logout'
       }
 
     };

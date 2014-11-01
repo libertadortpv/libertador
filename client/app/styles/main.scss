@@ -1,6 +1,15 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import "./custom-bootstrap.scss";
+@import "./app.scss";
+@import "./header.scss";
+@import "./transitions.scss";
+@import "./salon.scss";
+@import "./table.scss";
+
+// fonts:
+@import "./fonts/great-vives.scss";
 // endbower
 
 .browsehappy {

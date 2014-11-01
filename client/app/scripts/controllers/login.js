@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc function
- * @name libertadorApp.controller:AboutCtrl
+ * @name libertadorApp.controller:LoginCtrl
  * @description
  * # AboutCtrl
  * Controller of the libertadorApp
  */
 angular.module('libertadorApp')
-  .controller('LoginCtrl', ['$scope', '$rootScope', 'AuthService', 'AUTH_EVENTS',
-    function ($scope, $rootScope, AuthService, AUTH_EVENTS) {
+  .controller('LoginCtrl', ['$scope', '$rootScope', 'AuthService', 'AUTH_EVENTS', '$location',
+    function ($scope, $rootScope, AuthService, AUTH_EVENTS, $location) {
         $scope.credentials = {
           user: '',
           password: ''
@@ -21,6 +21,7 @@ angular.module('libertadorApp')
                 console.log($scope.credentials);
                 $rootScope.$broadcast(AUTH_EVENTS.loginSuccess);
                 $scope.setCurrentUser(user);
+                $location.url('/home');
                 // $state.go('home');
             }, function () {
                 $rootScope.$broadcast(AUTH_EVENTS.loginFailed);
