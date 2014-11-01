@@ -2,11 +2,18 @@
 
 .pretty-font {
   font-family: "Great Vibes";
-  font-size: 42px;
+
+  &h1 {
+    font-size: 42px;
+  }
 
   span {
     font-size: 15px;
     top: -13px;
     position: relative;
   }
+}
+
+.jumbotron {
+  background-color: #E3B385;
 }

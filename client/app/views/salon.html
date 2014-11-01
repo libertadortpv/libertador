@@ -4,9 +4,22 @@
   </div>
 
   <div class="jumbotron">
-    <div class="table" ng-repeat="table in tables" ng-click="hit(table.id)">
-      <span>{{table.id}}</span>
-      <img src="" alt="">
-    </div>
+      <div class="clearfix">
+        <div class="col-md-3 pull-left toggle" ng-repeat="table in tables">
+          <div
+            class="thumbnail"
+            ng-click="hit(table.id)"
+            ng-if="!hitted[table.id]"
+            ng-animate="'animate'">
+            <img src="images/table-icon3.png" alt="Table {{table.id}}">
+            <div class="caption">
+              <span class="badge">{{table.id}}</span>
+              <p class="pretty-font">
+                Mesa {{table.id}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
   </div>
 </section>

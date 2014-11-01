@@ -1,0 +1,11 @@
+$brand-primary: #6C1628;
+
+.btn.btn-success {
+  background-color: $brand-primary;
+  border-color: $brand-primary;
+
+  &:hover {
+    background-color: darken($brand-primary, 8%);
+    border-color: darken($brand-primary, 8%);
+  }
+}

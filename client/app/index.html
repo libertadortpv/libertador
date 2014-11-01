@@ -21,7 +21,7 @@
 
 
     <!-- Add your site or application content here -->
-    <div class="container" ng-controller="AppController">
+    <div class="container-fluid" ng-controller="AppController">
         <div class="header clearfix text-center">
             <p class="text-center">
                 <img class="header-logo" src="images/logo-header.png" alt="I'm Yeoman"><br>
@@ -39,7 +39,9 @@
                 <li ng-class="{active: inAdmin}">
                     <a ng-href="#admin">Admin</a>
                 </li>
-                <li ng-if="isAuthorized()" class="hello pull-right">Hello {{currentUser.name}}!</li>
+                <li ng-if="isAuthorized()" class="hello pull-right">
+                    <span class="label label-default label-bg">{{currentUser.name}}</span>
+                </li>
                 <li ng-if="isAuthorized()">
                     <a ng-href="#/login" ng-click="logout()">Logout</a>
                 </li>
