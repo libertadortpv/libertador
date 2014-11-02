@@ -1,0 +1,40 @@
+<section class="product-list">
+
+  <!-- category list -->
+<!--   <tabset class="categories" justified="true">
+    <tab
+      heading="Justified"
+      ng-repeat="(index, categ) in categories"
+      ng-click="changeCateg(categ)">
+
+    </tab>
+  </tabset> -->
+
+  <ul class="nav nav-tabs nav-justified">
+      <li
+        ng-repeat="(index, categ) in categories"
+        ng-click="changeCateg(categ)"
+        role="presentation"
+        ng-class="{active: selectedCateg === categ}">
+        <a href="">{{categ | camelcase}}</a>
+      </li>
+  </ul>
+
+  <!-- products list -->
+  <ul class="list-group clearfix">
+    <li class="product list-group-item" ng-repeat="(index, prod) in prods">
+      <div class="media">
+        <span class="media-left col-md-3" href="#">
+          <img src="images/logo-footer.png" alt="...">
+        </span>
+        <span class="add pull-right col-md-1 add-prod glyphicon glyphicon-ok-circle pull-right" ng-click="add(index)"></span>
+        <div class="media-body pull-right col-md-7">
+          <h4 class="media-heading">{{prod.name}}</h4>
+          <span class="description">{{prod.description}}</span>
+        </div>
+      </div>
+      <!-- <span class="name">{{prod.name}}</span> -->
+    </li>
+  </ul>
+
+</section>

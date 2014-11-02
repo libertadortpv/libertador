@@ -9,7 +9,18 @@ angular.module('libertadorApp')
 
     return {
       restrict: 'E',
-      templateUrl: 'views/consumption.html'
+      templateUrl: 'views/consumption.html',
+      scope: {
+        tableConsums: '='
+      },
+      controller: function($scope) {
+        $scope.remove = function(index) {
+          $scope.tableConsums[index].count = 0;
+          $scope.tableConsums.splice(index, 1);
+        };
+
+      }
+
     };
 
   }

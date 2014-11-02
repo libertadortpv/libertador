@@ -1,6 +1,23 @@
-<section class="talbe">
-  <h1 class="pretty-font">Mesa {{tableNber}}</h1>
+<section class="table">
+  <h1 class="pretty-font text-center">Mesa {{tableNber}}</h1>
 
-  <consumption prods="prods"></consumption>
-  <product-list></product-list>
+  <div class="panel panel-default clearfix">
+    <div class="panel-heading">
+      <h3 class="panel-title">Pedido</h3>
+    </div>
+    <div class="panel-body clearfix">
+
+      <consumption class="col-md-6 col-sm-6" table-consums="tableConsums"></consumption>
+      <product-list class="col-md-6 col-sm-6" table-consums="tableConsums"></product-list>
+
+
+      <div class="total-panel panel panel-default">
+        <h1 class="panel-body">
+          <div class="label label-default">Total: {{total | currency : symbol : fractionSize}}</div>
+          <button class="btn btn-success btn-block btn-lg" ng-click="submit()">OK</button>
+        </h1>
+      </div>
+
+    </div>
+  </div>
 </section>

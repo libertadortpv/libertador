@@ -1,3 +1,67 @@
 .table {
 
+  span.remove {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #FFA500;
+    font-size: 24px;
+    &:hover {
+      color: darken(#FFA500, 10%);
+    }
+  }
+
+  span.add {
+    color: green;
+    font-size: 45px;
+    position: relative;
+    right: 20px;
+    top: 5px;
+    &:hover {
+      color: darken(green, 10%);
+    }
+  }
+
+  .total-panel {
+    clear: both;
+
+    .label {
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+  }
+
+  .nav.nav-tabs {
+    a {
+      border-bottom: transparent;
+      &:hover {
+        border-bottom: transparent;
+      }
+    }
+
+    .active a {
+      background-color: gray;
+      color: white;
+      font-size: 20px;
+    }
+  }
+
+  .consumption {
+    .prod {
+      min-height: 66px;
+      &:hover {
+        background-color: #f5f5f5;
+      }
+
+      .name {
+        font-weight: bold;
+      }
+
+      .badge,
+      .count {
+        font-size: 16px;
+      }
+    }
+  }
+
 }

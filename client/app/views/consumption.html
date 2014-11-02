@@ -1,0 +1,15 @@
+<section class="consumption">
+  <ul class="list-group">
+    <li class="prod list-group-item clearfix" ng-repeat="(index, prod) in tableConsums">
+      <div class="col-md-8">
+        <span class="name">{{prod.name}}</span>
+        <!-- <span class="description">{{prod.description}}</span> -->
+      </div>
+      <div class="col-md-4">
+        <div class="prize"><span class="badge">{{prod.prize | currency : symbol : fractionSize}}</span></div>
+        <div class="count badge">X {{prod.count ? prod.count : 1}}</div>
+        <span class="remove glyphicon glyphicon-remove-circle pull-right" ng-click="remove(index)"></span>
+      </div>
+    </li>
+  </ul>
+</section>
