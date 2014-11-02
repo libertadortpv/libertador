@@ -1,0 +1,34 @@
+<section class="product-list">
+  <button class="btn btn-info" ng-click="addBox()">Add Client Check</button>
+
+  <!-- products list -->
+  <ul class="list-group clearfix">
+    <li
+      class="product list-group-item"
+      ng-repeat="(index, box) in boxes">
+
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">{{box.name}}</h3>
+          </div>
+
+          <div class="panel-body">
+            <span>Consume List:</span>
+            <ul
+              class="consums list-group"
+              ui-on-Drop="onDrop($event, $data, box.consums)">
+              <li
+                class="product list-group-item"
+                ui-draggable="true"
+                drag="consum"
+                on-drop-success="onDropSuccess($event, $index, box.consums)"
+                ng-repeat="consum in box.consums">
+                {{consum.name}}
+              </li>
+            </ul>
+          </div>
+        </div>
+    </li>
+  </ul>
+
+</section>

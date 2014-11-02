@@ -22,10 +22,9 @@
 
     <!-- Add your site or application content here -->
     <div class="container-fluid" ng-controller="AppController">
-        <div class="header clearfix text-center">
-            <p class="text-center">
-                <img class="header-logo" src="images/logo-header.png" alt="I'm Yeoman"><br>
-            </p>
+        <div class="header text-center">
+            <img class="header-logo" src="images/logo-flag.png" alt="Libertador">
+            <!-- <span class="header-bkg"></span> -->
             <ul class="nav nav-pills pull-right">
                 <li ng-class="{active: inHome}"><a ng-href="#">Home</a></li>
                 <li
@@ -83,6 +82,7 @@
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/angular-native-dragdrop/draganddrop.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -93,6 +93,7 @@
         <script src="scripts/controllers/salon.js"></script>
         <script src="scripts/controllers/table.js"></script>
         <script src="scripts/controllers/app.js"></script>
+        <script src="scripts/controllers/paycheck.js"></script>
         <script src="scripts/services/auth/auth-constants.js"></script>
         <script src="scripts/services/auth/auth-service.js"></script>
         <script src="scripts/services/auth/session.js"></script>
@@ -102,6 +103,8 @@
         <script src="scripts/directives/header.js"></script>
         <script src="scripts/directives/consumption.js"></script>
         <script src="scripts/directives/productList.js"></script>
+        <script src="scripts/directives/payList.js"></script>
+        <script src="scripts/directives/clientBox.js"></script>
         <!-- endbuild -->
 </body>
 </html>

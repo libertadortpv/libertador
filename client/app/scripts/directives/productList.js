@@ -9,7 +9,7 @@ angular.module('libertadorApp')
 
     return {
       restrict: 'E',
-      templateUrl: 'views/productList.html',
+      templateUrl: 'views/directives/productList.html',
       scope: {
         tableConsums: '='
       },
@@ -30,7 +30,7 @@ angular.module('libertadorApp')
           if (_.contains($scope.tableConsums, p)) {
             // increment the existing one:
             p.count = p.count ? p.count + 1 : 1;
-            $scope.$parent.$emit('count-increased');
+            $scope.$parent.$emit('count-changed');
           } else {
             $scope.tableConsums.push(p);
           }

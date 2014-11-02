@@ -1,0 +1,21 @@
+<section class="paylist">
+  <ul
+    class="list-group"
+    ui-on-Drop="onDrop($event, $data, tableConsums)">
+    <li
+      class="prod list-group-item clearfix"
+      ui-draggable="true"
+      drag="prod"
+      on-drop-success="onDropSuccess($event, $index, tableConsums)"
+      ng-repeat="(index, prod) in tableConsums">
+      <div class="col-md-8">
+        <span class="name">{{prod.name}}</span>
+      </div>
+      <div class="col-md-4">
+        <div class="prize"><span class="badge">{{prod.prize | currency : symbol : fractionSize}}</span></div>
+        <!-- <div class="count label label-info">X {{prod.count ? prod.count : 1}}</div> -->
+        <!-- <span class="remove glyphicon glyphicon-play pull-right" ng-click="move(index)"></span> -->
+      </div>
+    </li>
+  </ul>
+</section>

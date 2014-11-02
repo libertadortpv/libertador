@@ -9,7 +9,7 @@ angular.module('libertadorApp')
 
     return {
       // restrict: 'E',
-      // templateUrl: 'views/header.html'
+      // templateUrl: 'views/directives/header.html'
     };
 
   }

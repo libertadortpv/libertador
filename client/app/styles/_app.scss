@@ -1,5 +1,9 @@
 /** Main App rehusable styles **/
 
+body {
+  padding-top: 0 !important;
+}
+
 .pretty-font {
   font-family: "Great Vibes";
 
@@ -16,4 +20,8 @@
 
 .jumbotron {
   background-color: #E3B385;
+}
+
+.container-fluid {
+  overflow: hidden;
 }

@@ -9,7 +9,7 @@ angular.module('libertadorApp')
 
     return {
       restrict: 'E',
-      templateUrl: 'views/consumption.html',
+      templateUrl: 'views/directives/consumption.html',
       scope: {
         tableConsums: '='
       },
@@ -17,6 +17,20 @@ angular.module('libertadorApp')
         $scope.remove = function(index) {
           $scope.tableConsums[index].count = 0;
           $scope.tableConsums.splice(index, 1);
+        };
+
+        $scope.discount = function(index) {
+          var p = $scope.tableConsums[index];
+          if (!angular.isNumber(p.count)) {
+            p.count = 0;
+          }
+
+          p.count--;
+
+          if (p.count <= 0) {
+            $scope.remove(index);
+          }
+          $scope.$parent.$emit('count-changed');
         };
 
       }

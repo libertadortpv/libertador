@@ -1,24 +1,13 @@
 .table {
 
-  span.remove {
-    position: absolute;
-    right: 0;
-    top: 0;
-    color: #FFA500;
-    font-size: 24px;
-    &:hover {
-      color: darken(#FFA500, 10%);
-    }
-  }
-
   span.add {
-    color: green;
+    color: #53EA83;
     font-size: 45px;
     position: relative;
     right: 20px;
     top: 5px;
     &:hover {
-      color: darken(green, 10%);
+      color: darken(#53EA83, 15%);
     }
   }
 
@@ -61,7 +50,73 @@
       .count {
         font-size: 16px;
       }
+
+      .count {
+        display: inline-block;
+        margin: 5%;
+      }
+    }
+
+    span.remove {
+      position: absolute;
+      right: 0;
+      top: 0;
+      color: #FFA500;
+      font-size: 24px;
+      &:hover {
+        color: darken(#FFA500, 10%);
+      }
+    }
+
+    span.discount {
+      position: absolute;
+      right: 1px;
+      color: #19B0CB;
+      font-size: 24px;
+      top: 31px;
+      &:hover {
+        color: darken(#19B0CB, 10%);
+      }
     }
   }
+
+  .product,
+  .prod {
+    &.ng-enter,
+    &.ng-leave,
+    &.ng-move {
+      -webkit-transition: 0.5s linear all;
+      transition: 0.5s linear all;
+      position:relative;
+    }
+
+    &.ng-enter {
+      left:-10px;
+      opacity:0;
+    }
+    &.ng-enter.ng-enter-active {
+      left:0;
+      opacity:1;
+    }
+
+    &.ng-leave {
+      left:0;
+      opacity:1;
+    }
+    &.ng-leave.ng-leave-active {
+      left:-10px;
+      opacity:0;
+    }
+
+    &.ng-move {
+      opacity:0.5;
+    }
+    &.ng-move.ng-move-active {
+      opacity:1;
+    }
+  }
+
+
+
 
 }

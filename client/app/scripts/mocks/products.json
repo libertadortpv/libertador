@@ -1,37 +1,53 @@
 {
   "categories": {
-    "pastas": [
+    "entradas": [
       {
-        "name": "Lentejas",
+        "name": "Ensalada de pacú curado",
         "prize": "15.59",
         "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate repellendus voluptas expedita, et ex repudiandae officia soluta commodi. Deleniti consequatur dolorum expedita distinctio corporis consequuntur sint iste nostrum cupiditate commodi!"
       }, {
-        "name": "Lentejas",
+        "name": "Ensalada de sandía",
         "prize": "85.59",
         "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate repellendus voluptas expedita, et ex repudiandae officia soluta commodi. Deleniti consequatur dolorum expedita distinctio corporis consequuntur sint iste nostrum cupiditate commodi!"
       }, {
-        "name": "Lentejas",
+        "name": "Mollejas cocidas al horno",
         "prize": "65.59",
         "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate repellendus voluptas expedita, et ex repudiandae officia soluta commodi. Deleniti consequatur dolorum expedita distinctio corporis consequuntur sint iste nostrum cupiditate commodi!"
       }
     ],
 
-    "vinos": [
+    "Bebidas": [
       {
-        "name": "asd asdasd",
-        "prize": "25",
+        "name": "Gaseosa",
+        "prize": "25.00",
         "description": "askjd kjafdhkjshkfjhsjkd kjsdhf kjshdkfjh skdhfkjshkjdfhiuwe h gjkfdmvn oidhvixcnv wi"
       }
     ],
 
-    "dulces": [
+    "postres": [
       {
-        "name": "asdasd",
+        "name": "Flan al huevo",
         "prize": "105.50",
         "description": "asdafmsdf ksdfk jsdkjfh kjsdhfkjshdkfjhsk "
       }, {
-        "name": "dfglkdlkfg sdfsf sdfn kjsd",
-        "prize": "15.59 sdfsf sdfn kjsd",
+        "name": "Parfait de chocolate",
+        "prize": "15.59",
+        "description": "sd klsjdlkfj skljf lksjdf klsjdlkf jlskdjflksdfjkl "
+      }
+    ],
+
+    "carne": [
+      {
+        "name": "Bife de ternera",
+        "prize": "105.50",
+        "description": "asdafmsdf ksdfk jsdkjfh kjsdhfkjshdkfjhsk "
+      }, {
+        "name": "Chivo asado en horno de barro",
+        "prize": "15.59",
+        "description": "sd klsjdlkfj skljf lksjdf klsjdlkf jlskdjflksdfjkl "
+      }, {
+        "name": "Cordero patagónico",
+        "prize": "15.59",
         "description": "sd klsjdlkfj skljf lksjdf klsjdlkf jlskdjflksdfjkl "
       }
     ]

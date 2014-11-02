@@ -15,7 +15,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ang-drag-drop'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -37,6 +38,10 @@ angular
       .when('/salon/:tableId', {
         controller: 'TableCtrl',
         templateUrl: 'views/table.html'
+      })
+      .when('/paycheck', {
+        controller: 'PaycheckCtrl',
+        templateUrl: 'views/paycheck.html'
       })
       .when('/404', {
         templateUrl: 'views/404.html'

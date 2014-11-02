@@ -5,6 +5,8 @@ angular.module('libertadorApp')
   function($scope,   $rootScope,   USER_ROLES,   AuthService,   $location) {
     'use strict';
 
+    var tableOrder = null; // cache of the order
+
     $scope.currentUser = null;
     $scope.userRoles = USER_ROLES;
     $scope.isAuthorized = AuthService.isAuthorized;
@@ -33,6 +35,14 @@ angular.module('libertadorApp')
 
     $scope.logout = function() {
       AuthService.logout();
+    };
+
+    $scope.setOrder = function(order) {
+      tableOrder = order;
+    };
+
+    $scope.getOrder = function() {
+      return tableOrder;
     };
   }
 ])
