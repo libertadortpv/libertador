@@ -1,5 +1,5 @@
 <section class="product-list">
-  <button class="btn btn-info" ng-click="addBox()">Add Client Check</button>
+  <button class="btn btn-info" ng-click="addBox()">Add Client Ticket</button>
 
   <!-- products list -->
   <ul class="list-group clearfix">
@@ -7,16 +7,25 @@
       class="product list-group-item"
       ng-repeat="(index, box) in boxes">
 
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 class="panel-title">{{box.name}}</h3>
+        <div
+          class="panel panel-primary"
+          ui-on-Drop="onDrop($event, $data, box.consums)">
+
+          <div class="panel-heading clearfix">
+            <h3 class="panel-title pull-left">Ticket {{box.name}}</h3>
+            <span class="remove glyphicon glyphicon-remove-circle pull-right" ng-click="remove(index)"></span>
           </div>
 
           <div class="panel-body">
-            <span>Consume List:</span>
+            <p>Seleccionar Cliente: </p>
+            <select
+              class="form-control"
+              ng-model="box.client"
+              ng-options="client.name for client in clients">
+            </select>
+            <p>Consume List:</p>
             <ul
-              class="consums list-group"
-              ui-on-Drop="onDrop($event, $data, box.consums)">
+              class="consums list-group">
               <li
                 class="product list-group-item"
                 ui-draggable="true"

@@ -6,6 +6,11 @@
   .thumbnail {
     background-color: #FDF6DA;
 
+    img {
+      width: 80%;
+      margin: 5% 10%;
+    }
+
     .caption {
       .badge {
         position: absolute;

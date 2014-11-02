@@ -12,13 +12,15 @@ angular.module('libertadorApp')
         login: 'scripts/mocks/user.json',
         logout: 'scripts/mocks/user.json',
         order: 'scripts/mocks/user.json',
-        products: 'scripts/mocks/products.json'
+        products: 'scripts/mocks/products.json',
+        clients: 'scripts/mocks/clients.json'
       },
       dev: {
         login: 'api/login',
         logout: 'api/logout',
         order: 'api/order',
-        products: 'api/products'
+        products: 'api/products',
+        clients: 'api/clients'
       }
 
     };

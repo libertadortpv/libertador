@@ -4,7 +4,7 @@ angular.module('libertadorApp')
  * Defines a behavior to navigate between the pages.
  * @param {string} url The url to navigate on click.
  */
-.directive('clientBox', [function() {
+.directive('clientBox', ['Clients', function(Clients) {
     'use strict';
 
     return {
@@ -15,23 +15,23 @@ angular.module('libertadorApp')
       },
       controller: function($scope) {
         $scope.boxes = [{
-          clientId: '',
-            name: 'some box name',
-            consums: [{
-              name: 'asdasdasd'
-            }]
+          client: {},
+          name: '1',
+          consums: []
         }];
+
         $scope.activeBox = null;
+        $scope.clients = []; // list of clients.
+
+        Clients.get().then(function(clients) {
+          $scope.clients = clients;
+        });
 
         $scope.addBox = function() {
           $scope.boxes.push({
-            clientId: '',
-            name: 'some box name',
-            consums: [{
-              name: 'asdasdasd'
-            }, {
-              name: 'asasdddddddddddddddddd'
-            }]
+            client: {},
+            name: $scope.boxes.length + 1,
+            consums: []
           });
         };
 
@@ -43,14 +43,23 @@ angular.module('libertadorApp')
           $scope.activeBox.consums.push(prod);
         });
 
-        $scope.onDropSuccess = function($event, index, array){
+        $scope.onDropSuccess = function($event, index, array) {
           array.splice(index,1);
         };
 
-        $scope.onDrop = function($event, $data, array){
+        $scope.onDrop = function($event, $data, array) {
           array.push($data);
         };
 
+        // remove box
+        $scope.remove = function(index) {
+          var consums = $scope.boxes[index].consums;
+          $scope.boxes.splice(index, 1);
+          // restoring the consumisions:
+          consums.forEach(function(cons) {
+            $scope.tableConsums.push(cons);
+          });
+        };
       }
     };
 
