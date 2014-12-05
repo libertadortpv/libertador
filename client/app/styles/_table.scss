@@ -6,6 +6,8 @@
     position: relative;
     right: 20px;
     top: 5px;
+    cursor: pointer;
+
     &:hover {
       color: darken(#53EA83, 15%);
     }
